@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+
+<html ng-app="myapp">
+<div id="mycanvas">
+<canvas id="tempcanvas"    style="border:1px solid #d3d3d3 ;"></canvas>
+    
+</div>
+<head>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jQuery/jquery-3.1.1.js" 
+        type="text/javascript"></script>
+
+
+    <script src="script.js"></script>
+</head>
+
+
+<body ng-controller="mainController">
+
+
+<div id="main">
+
+    <div ng-view> </div>
+    
+<!--    ///////////////////////////-->
+    <div id="Points" class="jumbotron text-center">
+      X1: <input id="user.Ax" type="text" pattern= "[0-9]" ng-model="user.Ax" maxlength="3" size="4" >
+    Y1: <input id="user.Ay" type="text" ng-model="user.Ay" maxlength="3" size="4" > </p>{{user.getA()}}
+
+
+
+
+    </p>
+    X2: <input id="user.Bx" type="text" ng-model="user.Bx" maxlength="3" size="4">
+    Y2: <input id="user.By" type="text" ng-model="user.By" maxlength="3" size="4"></p>
+    {{user.getB()}}
+
+    </p>
+    X3: <input id="user.Cx" type="text" ng-model="user.Cx" maxlength="3" size="4">
+    Y3: <input id="user.Cy" type="text" ng-model="user.Cy" maxlength="3" size="4"></p> {{user.getC()}}
+    </p>
+<div id ="myerror" style="color: red">
+{{user.fixerror()}}
+    </div>
+</p>
+
+    </div>
+<!--//////////////////////////////////-->
+</div>
+</body>
+<div id=show_temp>
+<nav class="navbar navbar-default">
+    <div class="container">
+
+
+        <ul class="nav navbar-nav navbar-right"> 
+            <li><a href="#show"><i class="fa fa-book fa-fw"></i> SEND</a></li>
+             
+
+        </ul>
+    </div>
+</nav>
+
+
+</div>  
+
+
+</html>
+
